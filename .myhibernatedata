@@ -1,0 +1,24 @@
+#MyEclipse Hibernate Properties
+#Sun Jun 04 11:58:25 CST 2017
+sessionFactoryName=com.sysd.entity.HibernateSessionFactory
+genBasicCompId=false
+profile=
+daoSFId=
+version=3.2
+jndiPath=
+detectM2M=false
+reStrategyClass=
+detectO2O=false
+springDaoFile=
+useJavaTypes=true
+keyGenerator=identity
+libInstallFolder=/WebRoot/WEB-INF/lib
+addLibs2Project=true
+genVersionTag=false
+sessionFactoryId=sessionFactory
+basePersistenceClass=
+genAnnotations=false
+reSettingsFile=/HospitalAp/hibernate.reveng.xml
+configFile=/HospitalAp/src/applicationContext.xml
+createConfigFile=false
+addLibs2Classpath=true

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd
+           http://www.springframework.org/schema/aop
+           http://www.springframework.org/schema/aop/spring-aop.xsd
+           http://www.springframework.org/schema/tx 
+           http://www.springframework.org/schema/tx/spring-tx.xsd ">
+    <context:annotation-config /> 
+    <context:component-scan base-package="com" />
+    <aop:aspectj-autoproxy proxy-target-class = "true"/>
+     <bean id="dataSource"
+        class="org.apache.commons.dbcp.BasicDataSource">
+        <property name="driverClassName"
+            value="com.mysql.jdbc.Driver">
+        </property>
+        <property name="url"
+            value="jdbc:mysql://127.0.0.1:3306/hospitolindex">
+        </property>
+        <property name="username" value="root"></property>
+        <property name="password" value="123456"></property>
+    </bean>
+    <bean id="sessionFactory"
+        class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+        <property name="dataSource">
+            <ref bean="dataSource" />
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">
+                    org.hibernate.dialect.MySQLDialect
+                </prop>
+                <prop key="hibernate.hbm2ddl.auto">update</prop>
+                <prop key="hibernate.show_sql">true</prop>
+            </props>
+        </property>
+        <property name="mappingResources">
+        	<list>
+        		<value>com/sysd/entity/User.hbm.xml</value>
+        		<value>com/sysd/entity/Part.hbm.xml</value>
+        		<value>com/sysd/entity/Department.hbm.xml</value>
+        		<value>com/sysd/entity/Hospitol.hbm.xml</value>
+        		<value>com/sysd/entity/Privilege.hbm.xml</value>
+        		<value>com/sysd/entity/Role.hbm.xml</value>
+        		<value>com/sysd/entity/Docpaiban.hbm.xml</value>
+        		<value>com/sysd/entity/RolePrivilege.hbm.xml</value>
+        		<value>com/sysd/entity/Order.hbm.xml</value>
+        		<value>com/sysd/entity/RoleUser.hbm.xml</value></list>
+        </property>
+        </bean>
+    
+	  <bean id="TxManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+       <property name="sessionFactory" ref="sessionFactory" />
+   </bean>
+    
+   <tx:advice id="txAdvice" transaction-manager="TxManager">
+       <tx:attributes>
+           <tx:method name="save*" propagation="REQUIRED"/>
+            <tx:method name="add*" propagation="REQUIRED"/>
+           <tx:method name="delete*" propagation="REQUIRED"/>
+           <tx:method name="update*" propagation="REQUIRED"/>
+           <tx:method name="find*" propagation="REQUIRES_NEW"
+            timeout="30" rollback-for="java.sql.SQLException,java.io.IOException"/>
+       </tx:attributes>
+   </tx:advice>
+   <aop:config>
+       <aop:pointcut id="allServiceMethod"  expression=" execution ( public * com.sysd.dao.*.*(..))"/>
+       <aop:advisor pointcut-ref="allServiceMethod" advice-ref="txAdvice"/>
+   </aop:config>
+   <bean id="userDAO" class="com.sysd.dao.UserDAO">
+   	<property name="sessionFactory">
+   		<ref bean="sessionFactory" />
+   	</property>
+   </bean>
+   <bean id="partDAO" class="com.sysd.dao.PartDAO">
+   	<property name="sessionFactory">
+   		<ref bean="sessionFactory" />
+   	</property>
+   </bean>
+   <bean id="departmentDAO" class="com.sysd.dao.DepartmentDAO">
+   	<property name="sessionFactory">
+   		<ref bean="sessionFactory" />
+   	</property>
+   </bean>
+   <bean id="hospitolDAO" class="com.sysd.dao.HospitolDAO">
+   	<property name="sessionFactory">
+   		<ref bean="sessionFactory" />
+   	</property>
+   </bean>
+   <bean id="privilegeDAO" class="com.sysd.dao.PrivilegeDAO">
+   	<property name="sessionFactory">
+   		<ref bean="sessionFactory" />
+   	</property>
+   </bean>
+   <bean id="roleDAO" class="com.sysd.dao.RoleDAO">
+   	<property name="sessionFactory">
+   		<ref bean="sessionFactory" />
+   	</property>
+   </bean>
+   <bean id="docpaibanDAO" class="com.sysd.dao.DocpaibanDAO">
+   	<property name="sessionFactory">
+   		<ref bean="sessionFactory" />
+   	</property>
+   </bean>
+   <bean id="rolePrivilegeDAO"
+   	class="com.sysd.dao.RolePrivilegeDAO">
+   	<property name="sessionFactory">
+   		<ref bean="sessionFactory" />
+   	</property>
+   </bean>
+   <bean id="roleUserDAO" class="com.sysd.dao.RoleUserDAO">
+   	<property name="sessionFactory">
+   		<ref bean="sessionFactory" />
+   	</property>
+   </bean>
+   <bean id="DocpaibanDAO" class="com.sysd.dao.DocpaibanDAO">
+   	<property name="sessionFactory">
+   		<ref bean="sessionFactory" />
+   	</property>
+   </bean>
+   <bean id="UserDAO" class="com.sysd.dao.UserDAO">
+   	<property name="sessionFactory">
+   		<ref bean="sessionFactory" />
+   	</property>
+   </bean>
+   <bean id="PartDAO" class="com.sysd.dao.PartDAO">
+   	<property name="sessionFactory">
+   		<ref bean="sessionFactory" />
+   	</property>
+   </bean>
+   <bean id="DepartmentDAO" class="com.sysd.dao.DepartmentDAO">
+   	<property name="sessionFactory">
+   		<ref bean="sessionFactory" />
+   	</property>
+   </bean>
+   <bean id="RolePrivilegeDAO"
+   	class="com.sysd.dao.RolePrivilegeDAO">
+   	<property name="sessionFactory">
+   		<ref bean="sessionFactory" />
+   	</property>
+   </bean>
+   <bean id="HospitolDAO" class="com.sysd.dao.HospitolDAO">
+   	<property name="sessionFactory">
+   		<ref bean="sessionFactory" />
+   	</property>
+   </bean>
+   <bean id="PrivilegeDAO" class="com.sysd.dao.PrivilegeDAO">
+   	<property name="sessionFactory">
+   		<ref bean="sessionFactory" />
+   	</property>
+   </bean>
+   <bean id="RoleDAO" class="com.sysd.dao.RoleDAO">
+   	<property name="sessionFactory">
+   		<ref bean="sessionFactory" />
+   	</property>
+   </bean>
+   
+   <!-- 用户信息                                                                 -->	
+	<bean id="userAct" class="com.hos.action.UserAction" scope="prototype">
+   		<property name="userService" ref="userService"></property>
+	</bean>
+	
+	<bean id="userService" class="com.hos.service.UserService">
+		<property name="dao" ref="dao"></property>
+	</bean>
+	
+	<bean id="dao" class="com.hos.dao.UserDao">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	
+	<!-- ***************************预约******************************** -->
+	<bean id="pbAct" class="com.hos.action.paibanAction" scope="prototype">
+		<property name="pbService" ref="pbService"></property>
+		<property name="orService" ref="orService"></property>
+	</bean>
+	
+	<bean id="pbService" class="com.hos.service.docpaibanService">
+		<property name="dpbdao" ref="dpbdao"></property>
+	</bean>
+	
+	<bean id="dpbdao" class="com.hos.dao.docpaibanDao">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	
+	<bean id="orderdao" class="com.sysd.dao.OrderDAO">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	
+	<bean id="orAct" class="com.hos.action.orderAction" scope="prototype">
+		<property name="orService" ref="orService"></property>
+	</bean>
+	
+	<bean id="orService" class="com.hos.service.orderService">
+		<property name="orderdao" ref="orderdao"></property>
+	</bean>
+   
+   </beans>

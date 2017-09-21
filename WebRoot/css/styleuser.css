@@ -1,0 +1,417 @@
+@charset "utf-8";
+/* CSS Document */
+i,h1,h2,h3,h4,h5,h6,ul,li,img,ol,dl,dd,dt,p,input,span,a{padding:0;margin:0;list-style:none;border:0;}
+body{padding:0;margin:0;font-size:12px;font-family:"Hiragino Sans GB","Microsoft YaHei","微软雅黑","宋体",Arial,Verdana,sans-serif;background:#fff;color:#4c4948;}
+a:link,a:visited{text-decoration:none;}
+a:hover{text-decoration:none;}
+textarea{
+    outline: none;
+    resize: none;
+}
+input{
+    outline: none;
+}
+.clearFloat:after {
+    visibility:hidden;
+    clear:both;
+    display:block;
+    height:0px;
+    content: "."
+}
+.clearFloat{
+    zoom:1;
+}
+a{
+    cursor:pointer;
+    text-decoration:none;
+    color:#00B3EC;
+}
+
+	/*用户登录*/
+	.djdl_tp3_dl{  width: 499px;
+  font-size: 16px;
+  margin: 0 auto;
+  padding-top: 10px;
+  overflow: hidden;
+  padding-left: 113px;
+  line-height: 36px;
+}
+	.djdl_tp3_dl dd,.djdl_tp3_dl dt{float:left;}
+	.djdl_tp3_dl dt{width:102px;text-align:right;}
+	.djdl_tp3_dl dd span{  padding-left: 12px;}
+	.djdl_tp3_dl dd{  width: 380px;padding-left:12px;}
+	.djdl_tp3_dl_inp{width: 250px;background: #FFFFFF;height: 30px;
+line-height: 30px;font-family:"Hiragino Sans GB","Microsoft YaHei","微软雅黑","宋体",Arial,Verdana,sans-serif;
+font-size: 14px;font-weight: normal;font-style: normal;color: #3c3c3c; border: 1px solid #999;float:left;}
+	
+ 
+
+
+/*开发预约科室*/
+.kfyuks{width:1000px;margin:0 auto;margin-top: 20px;position:relative;}
+
+	/*左侧*/
+	.kfyuks_left{float:left;width:708px;height:auto;}
+	.kfyuks_title{width: 672px;
+    height: 43px;
+    background-color: #f4f6fa;
+    padding-left: 29px;}
+	.kfyuks_title p{width:138px;color:#000;height:43px;line-height:43px;font-size: 15px;}
+	.kfyuks_t_guize{width:272px;overflow: hidden;border:1px solid #f4f6fa;    margin-bottom: 10px;}
+	.kfyuks_t_g_dl{width:268px;overflow:hidden;}
+	.kfyuks_t_g_dl dt,.kfyuks_t_g_dl dd{float:left;}
+	.kfyuks_t_g_dl dt{padding-top: 44px;}
+	.kfyuks_t_g_dl dd{width:262px;overflow:hidden;}
+	.kfyuks_t_g_dd_p{color:#606060;font-size:15px;background:#f4f6fa;height:40px;line-height: 40px;padding-left: 10px;}
+	.kfyuks_t_g_dd_p span{font-size:12px;color:#00B3EA;}
+	.kfyuks_t_g_dd_div{padding:10px 5px 10px 10px;    overflow:auto;
+    height: 222px;}
+	.kfyuks_t_g_dd_div dl{font-size:12px;padding-bottom:5px;color:#888;overflow: hidden;}
+	.kfyuks_t_g_dd_div dl dt,.kfyuks_t_g_dd_div dl dd{float:left;}
+	.kfyuks_t_g_dd_div dl dt{display:inline-block;font-size:12px;color:#555;float:left;width:68px;}
+	.kfyuks_t_g_dd_div dl dd{display:inline-block;float:left;font-weight:normal;width:170px;}
+	.kfyuks_yyksbox {
+    float: left;
+    overflow: hidden;
+    width: 699px;
+    border: 1px solid #f4f6fa;
+    margin: 0px 0px 2px 0;
+    background: none repeat scroll 0% 0% #DFF2FC;
+}
+	.kfyuks_yyksdl {
+		float: left;
+		overflow: hidden;
+		width: 134px;
+		text-align: center;
+		line-height:16px;
+		font-size: 13px;
+		color: #3c3c3c;
+		font-weight: bold;
+		padding: 10px 5px;
+		height: 100%;
+	}
+
+	.kfyuks_yyksxl {
+		float: right;
+		overflow: hidden;
+		text-align: left;
+		width: 554px;
+		background: none repeat scroll 0% 0% #f2fbff;
+		
+	}
+	.kfyuks_ks_content {
+		float: left;
+		width: 549px;
+		margin: 5px 0px 5px 5px;
+		min-height: 70px;
+		   _height: 70px;
+	}
+	.kfyuks_ks_content ul {
+		margin: 0px;
+		    overflow: hidden;
+    padding-top: 2px;
+	}
+	.kfyuks_ks_content li {
+		float: left;
+		overflow: hidden;
+		width: 174px;
+		color: #565658;
+		font-family:"Hiragino Sans GB","Microsoft YaHei","微软雅黑","宋体",Arial,Verdana,sans-serif;
+
+		font-size: 13px;
+		font-weight: normal;
+		font-style: normal;
+		text-align: left;
+		padding-right:7px;
+		margin-bottom: 12px;
+	}
+	.kfyuks_ks_content li a:link,.kfyuks_ks_content li a:visited{
+    color: #4c4948;
+	}
+	.kfyuks_ks_content li a:hover{color:#1a8af0;}
+	/*右边*/
+	.kfyuks_right{float:right;}
+	.kfyuks_right_tab{width:274px;height:245px;display: none;}
+	.kfyuks_right_tab_menu,.kfyuks_right_tab_menu ul{width:272px;height:42px;}
+	.kfyuks_right_tab_menu ul{border: 1px solid #eee;border-bottom: 0;}
+	.kfyuks_right_tab_menu ul li{ float: left;
+  margin-left: 0px;
+  background: #fff;
+  color: #999;
+  width: 91px;
+  height: 41px;
+  line-height: 42px;
+  text-align: center;
+  font-size: 13px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;}
+  .kfyuks_right_tab_menu ul li.kfyuks_right_nobor{ width: 90px;border-right:0;}
+	.kfyuks_right_tab_box{width:272px;overflow:hidden;background:#fff;border: 1px solid #eee;border-top:0px;}
+	.kfyuks_right_tab_box ul{width:256px;padding:14px;}
+	.kfyuks_right_tab_box ul li{line-height:27px;font-size:12px;}
+	.kfyuks_right_tab_box ul li a{color:#969696;background: url(../images/ggdd.png) left center no-repeat;padding-left: 14px;}
+	.kfyuks_right_tab_box ul li a:hover{color: #4c4948;
+    background: url(../images/ggdd1.png) left center no-repeat;}
+	.kfyuks_right_tab_box .kfyuks_right_hide{display:none;}
+	.kfyuks_right_tab_menu .kfyuks_right_selected{cursor:text; 
+  color: #54C2F0;
+  border:0;
+    border-bottom: 2px solid #54C2F0;}
+
+.yuyuexuzhi{width:1000px;margin:0 auto;height:auto;  margin-top: 20px;position:relative;margin-bottom: 40px;}
+.yuyuexuzhi_title{width:1000px;height:30px;border-bottom:1px solid #dcdddd;}
+.yuyuexuzhi_title p{width: 138px;
+    background: #60bff2;
+    color: #FFF;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 15px;}	
+.yuyuexuzhi_context{width:930px;overflow:hidden;padding-top:20px;margin:0 auto;}	
+.yuyuexuzhi_context h2{width:400px;height:50px;margin:0 auto;text-align:center;}
+.yuyuexuzhi_context ul li{font-size:14px;line-height:26px;}
+
+
+/*点击预约申请时弹窗*/
+#booking_yuyue{width: 492px;background: #fff;position: absolute;left: 38%; top: 22%;border: 1px solid #1a8af0; display: none;font-size: 14px; z-index: 999999;padding-bottom: 18px;}
+.booking_yuyue_h3{width:492px;height:52px;line-height:52px;text-align:center;color:#444;  font-size: 18px;background:#f7f7f7;font-weight:normal;}
+.booking_yuyue_dl{width: 452px;
+  overflow: hidden;
+  margin-top: 12px;
+  padding-left: 33px;}
+.booking_yuyue_dl dt,.booking_yuyue_dl dd{float:left;}
+.booking_yuyue_dl dt{width:100px;text-align: right;  padding-right: 12px;}
+.booking_yuyue_dl dd label{display:block;  line-height: 27px;}
+.booking_yuyue_dl dd label span{padding-left:12px;}
+.booking_yuyue_dl dd p{line-height:29px;}
+.booking_yuyue_dl dd p span{margin-left:12px;}
+.booking_yuyue_dl dd .bo_disabled{color:#CCC;}
+.booking_yuyue_dl_tjsq2,.booking_yuyue_dl_tjsq3{display:inline-block;text-align:center;height:30px;line-height:30px; width: 98px;background:#1a8af0;color:#fff;  margin-top: 20px;  margin-left: 210px;font-size:12px;}
+.booking_yuyue_dl_tjsq3{margin-left: 165px;}
+.booking_yuyue_inputa{    padding: 2px;width: 100px;background: #FFFFFF;height:26px;line-height: 26px;font-family:"Hiragino Sans GB","Microsoft YaHei","微软雅黑","宋体",Arial,Verdana,sans-serif;
+font-size: 14px;font-weight: normal;font-style: normal;color: #3c3c3c;border: 1px solid #e5e5e5;float:left;}
+.booking_yuyue_dl dd img{float:left;}
+.booking_yuyue_close{display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: url(../images/dl_close.png) no-repeat;_background: url(../images/dl_close2.png) no-repeat;
+  top:-20px;
+  right: -20px;position:absolute;}
+
+
+
+
+/*科室预约界面*/
+#ksorder_top{width:1000px;margin:0 auto;}
+.ksorder_div{ border-bottom: 2px solid #60bff2;height:30px; margin-top: 20px;}
+.ksorder_ul{float: left;  width: 800px; height: 30px;font-size: 15px;line-height: 30px;}
+.ksorder_ul li{float: left;width: 110px;text-align: center;}
+.ksorder_ul li a{color:#00B3EC;display:inline-block; width: 110px;} 
+.ksorder_ul li a:hover{color:#036EB7;}
+.ksorder_ul li a.ksorder_ul_color{    color: #ffffff;background: #60bff2;}
+.ksorder_liright{display:inline-block;float:right;border: 0px;width: 103px; height: 30px;font-size: 14px;line-height: 30px;text-align:center;}
+.ksorder_liright a{color:#00B3EC;text-decoration:underline;}
+.ksorder_liright a:hover{background:none;color:#036EB7;}
+
+.ksorder_box{width: 1000px;overflow:hidden;background:#F7F7F7;clear:both;  padding-bottom:8px;}
+.ksorder_box_top{width: 950px;border-bottom: 1px solid #dcdddd;height: 52px; margin: 0 auto;line-height: 52px;}
+.ksorder_box_top_p{width:533px;float:left;font-size: 16px;}
+.ksorder_box_top_p strong{font-size:15px;}
+.ksorder_box_top_p a{color:#F29600;padding-left:12px;font-size: 12px;}
+.ksorder_box_top_p2{width:415px;float:right;font-size: 16px;}
+.ksorder_box_top_p2 span{font-weight:bold;padding-left:12px;color:#036EB7;}
+
+.ksorder_box_content{width: 950px;overflow:hidden;margin: 0 auto;}
+.ksorder_c_left,.ksorder_c_right{float:left;}
+.ksorder_c_left{width: 695px;overflow:hidden;  margin-top: 15px;}
+
+.ksorder_box_con_dl{width: 695px;/*height:166px;*/font-size: 12px;  float: left;}
+.ksorder_box_con_dl dt,.ksorder_box_con_dl dd{float:left;}
+.ksorder_box_con_dl dt img{width:200px;height:150px;}
+.ksorder_box_con_dl dd{width:450px;margin-left: 29px;}
+
+.ksorder_box_con_dl dd dl{width:446px;overflow:hidden;}
+.ksorder_box_con_dl dd dl dt,.ksorder_box_con_dl dd dl dd{float:left}
+.ksorder_box_con_dl dd dl dd{width:418px;margin-left:4px;    color: #888;}
+.ksorder_box_con_dl dd dl dd p {   line-height: 20px;}
+.ksorder_box_con_dl dd dl dd p a{color:#555;}
+.ksorder_box_con_dl dd dl dd p a:hover{color:#4ab4ed;}
+.ksorder_box_pdisplay{display:none;}
+.ksorder_box_con_dl .ksorder_a_block{margin-top:4px;color:#4c4948;display:block;text-decoration:underline;  padding-bottom: 23px;}
+.ksorder_c_right{width:240px;overflow:hidden;padding-left:10px; margin-top: 15px;display: none;}
+.ksorder_c_right h4{font-weight:normal;font-size:14px;padding-bottom: 2px; background:url(../images/remenyiyuan.png) left center no-repeat;padding-left: 25px;height:25px;line-height:25px;color:#666;}
+.ksorder_c_right ul{padding-left:9px;}
+.ksorder_c_right ul li{font-size: 12px; background: url(../images/ggdd.png) left 7px no-repeat;margin-bottom: 7px}
+.ksorder_c_right ul li a{color: #969696; padding-left: 16px;display: inline-block;line-height: 17px;}
+.ksorder_c_right ul li a:hover{    color: #4c4948; background: url(../images/ggdd1.png) left 7px no-repeat;}
+#ksorder_time{width:1000px;overflow:hidden;margin:0 auto;margin-top:0px;margin-bottom: 39px;}
+.ksorder_time_title{width:980px;padding:10px;overflow:hidden;line-height: 29px;}
+.ksorder_t_p{float:left;font-size:16px;}
+.ksorder_t_ksjs{font-size:14px;color:#F00;float:left;}
+.ksorder_t_ksjs span{color:#333;}
+.callback_ks{display:inline-block;text-decoration:underline;font-size:14px;color:#00B3EC;margin-left: 16px;float:left;} 
+.ksorder_t_ksjs .callback_ks{float:right;}
+.ksorder_time_ckb{display: inline-block;width: 110px;height: 25px;float: right;color: #fff;font-size: 14px;line-height: 25px;background:url(../images/yuepaib_small.jpg) 108px center #4ab4ed no-repeat;text-align: center;border-radius: 4px; -moz-border-radius:4px;-webkit-border-radius:4px;    padding-right: 9px;}
+.ksorder_time_center{width:1000px;overflow:hidden;margin:0 auto;}
+.ksorder_cen_l{width:728px;float:left;    border-left: 1px solid #e5e5e5;}
+.ksorder_cen_l_l{width:34px;float:left;height:325px;background:#f2f8ff;font-size:14px;    border-bottom: 1px solid #e5e5e5;}
+.ksorder_cen_l_l ul,.ksorder_cen_l_l a{float:left;}
+
+.ksorder_btn_left{display:inline-block;width:34px;height:47px;background:url(../images/left.jpg) no-repeat;}
+.ksorder_cen_l_l .ksorder_btn_left.dasabled{background:url(../images/left_1.jpg) no-repeat;}
+.ksorder_cen_l_l ul li{width:34px;height:90px;line-height:90px;text-align:center;    }
+.ksorder_cen_l_l2 ul li{ line-height: 17px;height: 35px;padding-top: 46px;  color: #F29600;}
+.ksorder_cen_l_table{float:left;width:658px;height:325px;overflow: hidden;position:relative;border-right: 1px solid #dcdddd;border-bottom: 1px solid #e5e5e5;}
+.ksorder_cen_l_t_c{width:999em;height:326px;position:absolute;left:0;}
+.ksorder_cen_l_table table{width:659px;height:326px;background:#e5e5e5;font-size:14px;float:left; }
+.ksorder_cen_l_table table th{background:#f8fafc;height:44px;width:94px;color:#868686;    font-weight: normal;border:1px solid #dcdddd;border-bottom: none;border-right: none;font-size:12px;}
+.ksorder_cen_l_table table tr{border-bottom:none;}
+.ksorder_cen_l_table table td{background:#fff;width:94px;height:90px;text-align:center;border:1px solid #e5e5e5;    padding: 0 6px;border-bottom: none;border-right: none;font-size:12px;}
+.ksorder_cen_l_t_c table th p{font-weight:normal;font-size:12px;}
+.ksorder_cen_l_table table .ksorder_kyy{background:#e0eefd;cursor:pointer;color:#4ab4ed;}
+.ksorder_cen_l_table table .ksorder_bgcol{background:#4ab4ed;color:#fff;}
+.ksorder_cen_l_table table .ksorder_ym{background:#fafafa;color:#868686;}
+.ksorder_cen_l_table table .ksorder_ym1{background:#e3e4e5;}
+.ksorder_cen_l_r{width:34px;float:left;height:325px;background:#f2f8ff; border-bottom: 1px solid #e5e5e5;}
+.ksorder_btn_right{display:inline-block;width:34px;height:47px;background:url(../images/right.jpg) no-repeat;}
+.ksorder_cen_l_r .ksorder_btn_right.dasabled{background:url(../images/right_1.jpg) no-repeat;}
+/*右边预约规则*/
+.ksorder_cen_r{width:262px;overflow:hidden;padding-left:4px;border:1px solid #dcdddd;float:left;}
+.ksorder_cen_r_top{width:263px;height:144px;padding-top: 6px;overflow:auto;}
+.ksorder_cen_r_top h4{    font-size: 15px;
+    font-weight: normal;
+    color: #606060;
+    margin-bottom: 6px;}
+.ksorder_cen_r_top ul {border-bottom:1px solid #eeeeee;    padding-bottom: 8px;    margin-right: 6px;}
+.ksorder_cen_r_top ul li{line-height:22px;font-size:12px;    color: #888;}
+.ksorder_cen_r_top ul li span{color:#333;}
+/*.ksorder_cen_r_bottom{width:263px;height:149px;font-size:14px;overflow:auto;padding: 9px 0;}
+.ksorder_cen_r_bottom dl{width:234px;overflow:hidden;margin-bottom:12px;}
+.ksorder_cen_r_bottom dl dt,.ksorder_cen_r_bottom dl dd{float:left;}
+.ksorder_cen_r_bottom dl dd{width:200px;}*/
+.ksorder_cen_r_top{width:263px;height:305px;font-size:14px;overflow:auto;padding: 9px 0;}
+.ksorder_cen_r_top dl{width:234px;overflow:hidden;margin-bottom:12px;    margin-top: 8px;}
+.ksorder_cen_r_top dl dt,.ksorder_cen_r_top dl dd{float:left;}
+.ksorder_cen_r_top dl dt{font-size:15px;}
+.ksorder_cen_r_top dl dd{width:236px;    margin-top: 6px; font-size: 12px;   color:#888}
+.ksorder_cen_r_top dl dd p{font-size: 12px;}
+/*点击预约的效果*/
+#ksorder_djgh_doctor{width:995px;overflow:hidden;display:none;border: 1px solid #e5e5e5;border-bottom:none;border-top:0;}
+/*没有点击时的效果*/
+#ksorder_djgh_mrxg{width:995px;overflow:hidden;display:block;border: 1px solid #e5e5e5;border-top:0;}
+.ksorder_djgh_wz{width: 400px;overflow: hidden;padding-bottom: 20px;padding-top: 20px;color: #9f9f9f; padding-left: 44px; margin: 0 auto;  font-size: 16px;}
+.ksorder_djgh_wz img{vertical-align:middle;margin-right:12px;}
+/*全部是约满的情况和没有号源的情况下*/
+.ksorder_djgh_ewmcs{width: 100%;text-align: center;}
+.ksorder_djgh_ewmcs span,.ksorder_djgh_ewmcs dl{float: left;}
+.ksorder_djgh_ewmcs span{display: inline-block;}
+.ewmcs_dl{    width: 508px; overflow: hidden;	margin: 0 auto;padding: 20px 0;}
+.ewmcs_dl dt,.ewmcs_dl dd{float: left;text-align: left;}
+.ewmcs_dl dt{padding-right: 16px;}
+.ewmcs_dl dd h3{color: #fec109;font-size: 18px;padding-bottom: 7px;font-weight: normal;}
+.ewmcs_dl dd p{font-size: 14px;width: 350px;color: #333;}
+.ewmcs_dl dd p span{color: #fec109;padding-top:7px;    display: inline-block;}
+.ewmcs_span_left img{width:225px;height: 150px;}
+.ewmcs_span_right img{width: 250px;height: 150px;}
+/*可预约*/
+.ksorder_djgh_dr1{width:995px;overflow:hidden;border-bottom:1px solid #e4e4e4;padding-bottom:10px;padding-top:10px;}
+.ksorder_dr1_dl{  width:504px;overflow:hidden;padding-top: 10px;border-right: 1px dashed #ccc;padding-left: 49px;float:left;  margin-top: 4px;}
+.ksorder_djgh_dr1_bg{background:#f5fcff;}
+.ksorder_dr1_dl dt,.ksorder_dr1_dl dd{float:left;}
+.ksorder_dr1_dl dt img{display:inline-block;height: 87px;margin: 0 auto; max-width: 87px;-webkit-border-radius: 42px;-moz-border-radius: 42px;border-radius: 42px;}
+.ksorder_dr1_dl dd{font-size:14px;  padding-top: 20px;padding-left:12px;}
+.ksorder_dr1_dl dd h4{font-size:14px;}
+.ksorder_dr1_dl dd b{font-weight: normal;color:#00B3EC; padding-left: 10px;}
+.ksorder_dr1_dl dd p{color:#969292;  width: 384px;}
+.ksorder_dr1_p{ width:140px;border-right: 1px dashed #ccc;float:left;font-size:13px;     padding: 31px 0px 31px 33px;overflow: hidden;}
+.ksorder_dr1_p span{display:block;color:#868686;padding-bottom: 5px;}
+.ksorder_dr1_p .ksorder_dr1spa b{color:#e36e65;font-weight:normal;}
+.ksorder_dr1_p .ksorder_dr1spa2 b{color:#fec109;font-weight:normal;}
+.ksorder_dr1_p2{ width:200px;text-align:center;height:100px;line-height:100px;float:left; margin-left: 32px;  padding-top: 8px;}
+.ksorder_dr1_p2 .ksorder_dr1_syhy,.ksorder_dr1_p2 .ksorder_dr1_stop{display:inline-block;width:118px; height:40px;background:url(../images/xzgh_bg.png) no-repeat;text-align: center;line-height:40px;font-size:13px; }
+.ksorder_dr1_p2 .ksorder_dr1_stop{ background-position:0 0;color:#868686; }
+.ksorder_dr1_p2 .ksorder_dr1_syhy{ background-position:0 -39px;color:#fff; }
+.ksorder_dr1_p2 .ksorder_dr1_syhy strong{padding-left:4px;}
+/*不可预约*/
+.ksorder_djgh_dr2{width:1000px;overflow:hidden;border-bottom:1px solid #e4e4e4;padding-bottom: 20px;padding-top: 20px;}
+.ksorder_dr2_dl{  width: 476px;height:90px;padding-top: 10px;border-right: 1px dashed #ccc;padding-left: 49px;float:left;}
+.ksorder_dr2_dl dt,.ksorder_dr2_dl dd{float:left;}
+.ksorder_dr2_dl dt img{display: inline-block;height: 87px;margin: 0 auto; max-width: 87px;-webkit-border-radius: 30px;-moz-border-radius: 30px;border-radius: 30px;}
+.ksorder_dr2_dl dd{font-size:14px;  padding-top: 20px;padding-left:12px;}
+.ksorder_dr2_dl dd h4{font-size:16px;}
+.ksorder_dr2_dl dd p{color:#969292;}
+.ksorder_dr2_p{ width:200px;text-align:center;height:100px;line-height:100px;border-right: 1px dashed #ccc;float:left;font-size:18px;}
+.ksorder_dr2_p2{ width:200px;text-align:center;height:100px;line-height:100px;float:left;font-size:18px;  margin-left: 32px;}
+.ksorder_dr2_p2 .ksorder_dr2_yym{display:inline-block;width:94px; height:84px;background:url(../images/yym.jpg) no-repeat;color:#fff; text-align: center;line-height:25px;padding-top:8px;}
+/*电力医院的样式*/
+.ksorder_djgh_padb{padding-bottom: 0;}
+.ksorder_dlyy_top{overflow: hidden; padding-bottom: 14px;}
+.ksorder_dlyy_dl{  width:504px;overflow:hidden;padding-top: 10px;padding-left: 49px;float:left;  margin-top: 4px;}
+.ksorder_dlyy_dl dt,.ksorder_dlyy_dl dd{float:left;}
+.ksorder_dlyy_dl dt img{display:inline-block;height: 87px;margin: 0 auto; max-width: 87px;-webkit-border-radius: 42px;-moz-border-radius: 42px;border-radius: 42px;}
+.ksorder_dlyy_dl dd{font-size:14px;  padding-top: 20px;padding-left:12px;}
+.ksorder_dlyy_dl dd h4{font-size:14px;}
+.ksorder_dlyy_dl dd h4.ksorder_dlyy_h4{font-weight: normal;    font-size: 15px;  padding-top: 12px;}
+.ksorder_dlyy_dl dd b{font-weight: normal;color:#00B3EC; padding-left: 10px;}
+.ksorder_dlyy_jg{float: right;  padding-right: 64px;  padding-top: 41px;  font-size: 16px;}
+.ksorder_dlyy_jg .ksorder_dr1spa b{color:#e36e65;font-weight:normal;}
+.ksorder_dlyy_ul{}
+.ksorder_dlyy_ul li{width: 96%;    margin: 0 auto;overflow: hidden;    height: 60px;line-height: 60px;    border-top: 1px dashed #ccc;color:#868686;}
+.ksorder_dlyy_ul li span{display: inline-block;float: left;}
+.ksorder_dlyy_ul li .ksorder_li_time{width: 43%;padding-left:4%;font-size: 14px;}
+.ksorder_dlyy_ul li .ksorder_li_syhy{width: 29%;font-size: 14px;}
+.ksorder_dlyy_ul li .ksorder_btn_yygh,.ksorder_dlyy_ul li .ksorder_btn_stop{width: 20%;text-align: center;}
+.ksorder_dlyy_ul li .ksorder_btn_yygh a,.ksorder_dlyy_ul li .ksorder_btn_stop a{display: inline-block;width: 118px; height: 40px; background: url(../images/xzgh_bg.png) no-repeat;text-align: center; line-height: 40px; font-size: 13px;color:#868686;    margin-top: 10px;}
+.ksorder_dlyy_ul li .ksorder_btn_stop a{    background-position: 0 -39px;
+	color: #fff;}
+.ksorder_dlyy_ul .ksorder_li_syhy b {
+	color: #fec109;
+	font-weight: normal;}
+/*科室月排班表*/
+#ksmonth{width:690px;overflow:hidden;position:fixed;left:24%;top:30%;display:none;z-index:2222;}
+.ksmonth_title{width:670px;height:45px;background:#2da5e1;  padding-left: 20px;  line-height: 45px;}
+.ksmonth_title_h2{width:200px;float:left;color:#fff;font-weight:normal;font-size:16px;}
+#ksmonth .ksmonth_close{  display: inline-block;
+  width: 25px;
+  height: 20px;
+  background: url(../images/close.jpg) no-repeat;
+  top: 13px;
+  right: 8px;
+  position: absolute;}
+.ksmonth_left{width:68px;height:396px;float:left;background:#fff;border:2px solid #e6e6e6;border-right:none;}
+.ksmonth_left ul{padding-top:75px;}
+.ksmonth_left ul li{text-align:center;height: 98px;font-size:14px;color: #2da5e1;}
+.ksmonth_pre{display:inline-block;text-align:center;color:#2da5e1;}
+.ksmonth_pre .ksmonth_l_Span{display:inline-block;width:14px;height:10px;background:url(../images/data1.png) 0 0 no-repeat;font-size:1px;}
+.ksmonth_next{display:inline-block;text-align:center;color:#2da5e1;}
+.ksmonth_next .ksmonth_l_Span2{display:inline-block;width:14px;height:10px;background:url(../images/data1.png) 0 -10px no-repeat;font-size:1px;}
+#ksmonth table{float:left;width:620px;height:400px;background:#f3f3f3;}
+#ksmonth table tr th{background:#fff;width:72px;height:53px;  font-size: 14px;color:#6d6d6d;font-weight: normal;}
+#ksmonth table tr td{background:#fff;width:72px;}
+#ksmonth table tr td.ksmonth_bgblue{background:#2da5e1;cursor:pointer;}
+#ksmonth table tr td.ksmonth_bgblue b{color:#fff;}
+#ksmonth table tr td.ksmonth_bggray{background:#e6e7e7;}
+#ksmonth table tr td b {
+  float: left;
+  overflow: hidden;
+  width: 60px;
+  height: 20px;
+  margin-left: 15px;
+  line-height: 20px;
+  font-size: 14px;
+  color: #ababab;
+  text-align: left;
+  font-weight: normal;
+}
+#ksmonth table tr td span {
+  float: left;
+  overflow: hidden;
+  width:79px;
+  height: 20px;
+  margin-top:5px;
+  line-height: 20px;
+  font-size: 14px;
+  color: #FFFFFF;
+  text-align: right;
+}
+#ksmonth table tr td.ksmonth_bggray span{color:#868686;}

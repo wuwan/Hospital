@@ -1,0 +1,3 @@
+eclipse.preferences.version=1
+validator.Checked=WebRoot/lay,WebRoot/plugins,WebRoot/js,WebRoot/frame
+validator.Unchecked=

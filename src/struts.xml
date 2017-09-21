@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+<!-- 把Struts的action交给spring托管 -->
+    <constant name="struts.objectFactory" value="spring"/>
+    <constant name="struts.devMode" value="true"/>
+    <constant name="struts.il8n.encoding" value="UTF-8"></constant>
+    <!--设置上传文件大小 （20MB）-->
+    <constant name="struts.multipart.maxSize" value="2097152"></constant>
+    <!--    定位视图资源的根路径 -->
+     <constant name="struts.convention.result.path" value="/WEB-INF/"></constant>
+    <!--设置struts配置文件修改以后系统是否自动重新加载该文件默认为false但是在开发环境下还是要设置成true-->
+    <constant name="struts.configuration.xml.reload" value="true"></constant>
+<!--************************************************************************************************************ -->
+
+<!-- 普通用户 -->
+  <package name="user" namespace="/" extends="struts-default">
+  <!--    登陆检测 -->
+     <action name="Login"  class="userAction"  method="Login">
+     <result>/index.jsp</result>
+        <result name="error">/login.jsp</result>
+        <result name="success1">/index_user.jsp</result>
+     </action>
+<!--    添加用户 -->
+   <action name="AddUser"  class="userAction"  method="Register">
+   <result>/login.jsp</result>
+   <result name="error">/register.jsp</result>
+   <result name="doc">/Doctor/DocAdd.jsp</result>
+  </action>
+  <!--   添加医生 -->
+   <action name="FindPart"  class="partAction"  method="FindPart">
+   <result>/Doctor/DocAdd.jsp</result>
+  </action>
+<!--   修改信息 -->
+   <action name="UserMessage"  class="userAction"  method="UserMessage">
+   <result>/User/MyMessage.jsp</result>
+   <result name="doctors">/Doctor/DocChange.jsp</result>
+    <result name="user">/User/BHChange.jsp</result>
+  </action>
+   <action name="ChangeUser"  class="userAction"  method="ChangeUser">
+   <result>/Doctor/DocShowAll.jsp</result>
+   <result name="user">/User/Bhgl.jsp</result>
+   </action>
+<!--   查询所有用户 -->
+   <action name="FindDoc"  class="userAction"  method="findAllDocs">
+   <result>/Doctor/DocShowAll.jsp</result>
+   </action>
+     <action name="FindBh"  class="userAction"  method="findBh">
+   <result>/User/Bhgl.jsp</result>
+   </action>
+ <action name="FindDocbyuser"  class="userAction"  method="findAllDocs">
+   <result>/User/userchart.jsp</result>
+   </action>
+  </package>
+  
+  
+  
+<!--   医生 -->
+<package name="doctor" namespace="/Doctor" extends="struts-default">
+<!--   删除医生 -->
+   <action name="DelDoc"  class="userAction"  method="Del">
+  </action>
+<!--  预约记录 -->
+   <action name="YuYueJiLu"  class="userAction"  method="FindOrderbyDocName">
+  <result>/Doctor/DocYuyutJiLu.jsp</result>
+  </action>
+<!--   医生排班信息 -->
+  <action name="FindPaiban"  class="docpaibanAction"  method="FindPaiBan">
+  <result>/Doctor/DocPaiban.jsp</result>
+  </action>
+  
+<!--   修改医生信息 -->
+   <action name="ChangeDoc"  class="userAction"  method="ChangeDoc">
+   <result>/Doctor/DocMessage.jsp</result>
+  </action>
+  
+  
+<!--  修改排班信息 -->
+    <action name="ChangPaiBan"  class="docpaibanAction"  method="ChangPaiBan">
+   <result>/Doctor/DocPaiban.jsp</result>
+  </action>
+  
+  
+   <!--  角色权限分配 -->
+   <action name="JueSeFenpei"  class="userAction"  method="FindUser">
+   <result>/Manager/JueSeFenPei.jsp</result>
+   </action>
+   <action name="QuanXianfenpei"  class="userAction"  method="FindRole">
+   <result>/Manager/QuanxianFenPei.jsp</result>
+   </action>
+<!--    查詢所有角色 -->
+   <action name="Findrole"  class="userAction"  method="FindRoles">
+   <result>/Manager/JSFP.jsp</result>
+   </action>
+<!--    修改用户对应的角色 -->
+    <action name="changerole"  class="userAction"  method="ChangeRole">
+    <result>/Manager/JueSeFenPei.jsp</result>
+   </action>
+<!--    为角色分配权限 -->
+     <action name="changeqx"  class="rolePrivilageAction"  method="Changepri">
+    <result>/Manager/QXFP.jsp</result>
+   </action>
+   <action name="changepriv"  class="rolePrivilageAction"  method="ChangeRPrivilge">
+    <result>/Manager/QuanxianFenPei.jsp</result>
+   </action>
+  </package>
+  
+  
+  
+  <package name="Manage" extends="struts-default"> 
+		<!-- 用户管理 -->	
+		<action name="ddoctorQuery" class="userAct" method="doDDQuery">
+		    <result name="jinru">/office-1.jsp</result>
+		    <result name="error">/office-1.jsp</result>
+		</action>
+        <action name="doctorQuery" class="userAct" method="doDoctorQuery">
+		    <result name="success">/office-1.jsp</result>
+		    <result name="error">/office-1.jsp</result>
+		</action>
+		<action name="Alldoctor" class="userAct" method="doAllDoctor">
+		    <result name="success">/getSZM.jsp</result>
+		    <result name="error">/office-1.jsp</result>
+		</action>
+		</package>
+		
+	
+<!--**************************************** 用户管理 ******************************************* -->
+	<package name="docpaiban" extends="struts-default">
+		<action name="docpaiban_*" class="pbAct" method="{1}">
+			<result name="pb">/yuyue.jsp</result>
+			<result name="suc">yyXq.jsp</result>
+			<result name="orderSuc">/yyXq.jsp</result>
+		</action>
+</package>
+<package name="order" extends="struts-default">
+		<action name="order_*" class="orAct" method="{1}">
+		   <result name="orderSuc">/yyXq.jsp</result>
+			<result name="xx">/yyXq.jsp</result>
+			<result name="suc">yyXq.jsp</result>
+		</action>
+</package>
+  
+  
+  
+  
+  
+  <!--   通讯 -->
+  <package  name="chat" namespace="/" extends="struts-default">
+<!--  在线交流 -->
+   <action name="Chat"  class="chatAction"  method="xx">
+   <result>/User/xxx.jsp</result>
+  </action>
+  </package>
+  
+  
+  
+  
+<!-- 全局流   -->
+    <package name="pd"  namespace="/" extends="struts-default">
+         <global-results>
+            <result name="error">/404.html</result>
+         </global-results>
+        <global-exception-mappings>
+            <exception-mapping exception="java.lang.NullPointerException"
+                result="error" />
+            <exception-mapping exception="java.lang.Exception"
+                result="error" />
+        </global-exception-mappings>
+    </package>
+    
+    
+</struts>    
